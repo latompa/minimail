@@ -34,11 +34,11 @@ class Minimail::MailTest < MiniTest::Unit::TestCase
     assert_equal "/usr/bin/uuencode #{Dir.pwd}/test/fake_attachment.txt /tmp/fake_attachment.txt;/usr/bin/uuencode #{Dir.pwd}/test/fake_attachment.txt /tmp/fake_attachment.txt", mail.attachments
   end
   
-  def test_can_deliver_a_mail
-    recipients = "jane@example.com"
-    mail = Minimail::Mail.new(:recipients => recipients)
-    assert_equal IO, mail.deliver.class
-  end
+#  def test_can_deliver_a_mail
+#    recipients = "jane@example.com"
+#    mail = Minimail::Mail.new(:recipients => recipients)
+#    assert_equal IO, mail.deliver.class
+#  end
   
   def test_ensure_mail_is_not_valid_unless_recipient_is_specified
     mail = Minimail::Mail.new()
